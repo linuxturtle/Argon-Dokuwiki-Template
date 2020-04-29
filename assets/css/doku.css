@@ -2822,54 +2822,48 @@ fieldset:disabled a.toggleAssistant {
   box-shadow: 0 0 0 0 rgba(118, 135, 232, 0.5);
 }
 
-.btn-secondary, #tool__bar button, #dokuwiki__content .secedit button {
+.btn-secondary, #tool__bar button {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.btn-secondary:hover, #tool__bar button:hover, #dokuwiki__content .secedit button:hover {
+.btn-secondary:hover, #tool__bar button:hover {
   color: #212529;
   background-color: #dee1e7;
   border-color: #d6dae2;
 }
 
-.btn-secondary:focus, #tool__bar button:focus, #dokuwiki__content .secedit button:focus,
+.btn-secondary:focus, #tool__bar button:focus,
 .btn-secondary.focus,
-#tool__bar button.focus,
-#dokuwiki__content .secedit button.focus {
+#tool__bar button.focus {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(212, 214, 216, 0.5);
 }
 
-.btn-secondary.disabled, #tool__bar button.disabled, #dokuwiki__content .secedit button.disabled,
+.btn-secondary.disabled, #tool__bar button.disabled,
 .btn-secondary:disabled,
-#tool__bar button:disabled,
-#dokuwiki__content .secedit button:disabled {
+#tool__bar button:disabled {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
-.btn-secondary:not(:disabled):not(.disabled):active, #tool__bar button:not(:disabled):not(.disabled):active, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled):active, #tool__bar button:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 #tool__bar button:not(:disabled):not(.disabled).active,
-#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle,
-#tool__bar .show > button.dropdown-toggle,
-#dokuwiki__content .secedit .show > button.dropdown-toggle {
+#tool__bar .show > button.dropdown-toggle {
   color: #212529;
   background-color: #d6dae2;
   border-color: #cfd3dc;
 }
 
-.btn-secondary:not(:disabled):not(.disabled):active:focus, #tool__bar button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus, #tool__bar button:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
 #tool__bar button:not(:disabled):not(.disabled).active:focus,
-#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active:focus,
 .show > .btn-secondary.dropdown-toggle:focus,
-#tool__bar .show > button.dropdown-toggle:focus,
-#dokuwiki__content .secedit .show > button.dropdown-toggle:focus {
+#tool__bar .show > button.dropdown-toggle:focus {
   box-shadow: 0 0 0 0 rgba(212, 214, 216, 0.5);
 }
 
@@ -3323,39 +3317,45 @@ button:not(:disabled):not(.disabled).active:focus,
   box-shadow: 0 0 0 0 rgba(94, 114, 228, 0.5);
 }
 
-.btn-outline-secondary {
+.btn-outline-secondary, #dokuwiki__content .secedit button {
   color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover, #dokuwiki__content .secedit button:hover {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
-.btn-outline-secondary:focus,
-.btn-outline-secondary.focus {
+.btn-outline-secondary:focus, #dokuwiki__content .secedit button:focus,
+.btn-outline-secondary.focus,
+#dokuwiki__content .secedit button.focus {
   box-shadow: 0 0 0 0 rgba(244, 245, 247, 0.5);
 }
 
-.btn-outline-secondary.disabled,
-.btn-outline-secondary:disabled {
+.btn-outline-secondary.disabled, #dokuwiki__content .secedit button.disabled,
+.btn-outline-secondary:disabled,
+#dokuwiki__content .secedit button:disabled {
   color: #f4f5f7;
   background-color: transparent;
 }
 
-.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active,
 .btn-outline-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-secondary.dropdown-toggle {
+#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle,
+#dokuwiki__content .secedit .show > button.dropdown-toggle {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
-.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active:focus,
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-outline-secondary.dropdown-toggle:focus {
+#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus,
+#dokuwiki__content .secedit .show > button.dropdown-toggle:focus {
   box-shadow: 0 0 0 0 rgba(244, 245, 247, 0.5);
 }
 
@@ -18762,7 +18762,7 @@ a.text-lighter:focus {
   border-width: 1px;
 }
 
-.btn-outline-secondary {
+.btn-outline-secondary, #dokuwiki__content .secedit button {
   color: #637089;
 }
 
@@ -25266,10 +25266,7 @@ input, select {
 #dokuwiki__content .secedit button {
   margin-bottom: 1em;
   float: right;
-  color: #999;
-  background-color: white;
   box-shadow: none;
-  font-size: 0.65rem;
 }
 #dokuwiki__content .secedit button:focus, #dokuwiki__content .secedit button:hover {
   background-color: white;

@@ -77,14 +77,16 @@ input, select {
     // Edit Button
     .secedit button {
         @extend .btn;
-        @extend .btn-secondary;
+        @extend .btn-outline-secondary;
+        //@extend .btn-secondary;
         @extend .btn-sm;
+
         margin-bottom: 1em;
         float: right;
-        color: #999;
-        background-color: white;
+        //color: #999;
+        //background-color: white;
         box-shadow: none;
-        font-size: 0.65rem;
+        //font-size: 0.65rem;
         &:focus,&:hover{
             background-color: white;
             box-shadow: none;
