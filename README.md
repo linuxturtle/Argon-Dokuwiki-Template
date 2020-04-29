@@ -19,7 +19,7 @@ ___
 Argon - a clean, responsive, modern template for Dokuwiki.
 https://www.dokuwiki.org/template:argon
 
-![Screenshot](screenshots/1.png)
+![Screenshot](screenshots/preview.png)
 
 ## Sidebar
 
@@ -42,5 +42,6 @@ sass --watch assets/css/doku.scss assets/css/doku.css
 ## More Screenshots
 
 ![Screenshot](screenshots/1.png)
-![Screenshot](screenshots/3.png)
 ![Screenshot](screenshots/2.png)
+![Screenshot](screenshots/3.png)
+![Screenshot](screenshots/4.png)
