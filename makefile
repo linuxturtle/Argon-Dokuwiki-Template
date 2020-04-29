@@ -1,0 +1,1 @@
+styles: sass --watch assets/css/doku.scss assets/css/doku.css

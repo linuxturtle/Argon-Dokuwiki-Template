@@ -2765,111 +2765,111 @@ fieldset:disabled a.toggleAssistant {
   pointer-events: none;
 }
 
-.btn-primary, #dw__login button, #dokuwiki__content .editButtons button, #dokuwiki__content #page__revisions button, #dokuwiki__content .secedit button {
+.btn-primary, #dw__login button, #dokuwiki__content .editButtons button, #dokuwiki__content #page__revisions button {
   color: #fff;
   background-color: #5e72e4;
   border-color: #5e72e4;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.btn-primary:hover, #dw__login button:hover, #dokuwiki__content .editButtons button:hover, #dokuwiki__content #page__revisions button:hover, #dokuwiki__content .secedit button:hover {
+.btn-primary:hover, #dw__login button:hover, #dokuwiki__content .editButtons button:hover, #dokuwiki__content #page__revisions button:hover {
   color: #fff;
   background-color: #3d55df;
   border-color: #324cdd;
 }
 
-.btn-primary:focus, #dw__login button:focus, #dokuwiki__content .editButtons button:focus, #dokuwiki__content #page__revisions button:focus, #dokuwiki__content .secedit button:focus,
+.btn-primary:focus, #dw__login button:focus, #dokuwiki__content .editButtons button:focus, #dokuwiki__content #page__revisions button:focus,
 .btn-primary.focus,
 #dw__login button.focus,
 #dokuwiki__content .editButtons button.focus,
-#dokuwiki__content #page__revisions button.focus,
-#dokuwiki__content .secedit button.focus {
+#dokuwiki__content #page__revisions button.focus {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(118, 135, 232, 0.5);
 }
 
-.btn-primary.disabled, #dw__login button.disabled, #dokuwiki__content .editButtons button.disabled, #dokuwiki__content #page__revisions button.disabled, #dokuwiki__content .secedit button.disabled,
+.btn-primary.disabled, #dw__login button.disabled, #dokuwiki__content .editButtons button.disabled, #dokuwiki__content #page__revisions button.disabled,
 .btn-primary:disabled,
 #dw__login button:disabled,
 #dokuwiki__content .editButtons button:disabled,
-#dokuwiki__content #page__revisions button:disabled,
-#dokuwiki__content .secedit button:disabled {
+#dokuwiki__content #page__revisions button:disabled {
   color: #fff;
   background-color: #5e72e4;
   border-color: #5e72e4;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active, #dw__login button:not(:disabled):not(.disabled):active, #dokuwiki__content .editButtons button:not(:disabled):not(.disabled):active, #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled):active, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active, #dw__login button:not(:disabled):not(.disabled):active, #dokuwiki__content .editButtons button:not(:disabled):not(.disabled):active, #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 #dw__login button:not(:disabled):not(.disabled).active,
 #dokuwiki__content .editButtons button:not(:disabled):not(.disabled).active,
 #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled).active,
-#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle,
 #dw__login .show > button.dropdown-toggle,
 #dokuwiki__content .editButtons .show > button.dropdown-toggle,
-#dokuwiki__content #page__revisions .show > button.dropdown-toggle,
-#dokuwiki__content .secedit .show > button.dropdown-toggle {
+#dokuwiki__content #page__revisions .show > button.dropdown-toggle {
   color: #fff;
   background-color: #324cdd;
   border-color: #2742db;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus, #dw__login button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .editButtons button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus, #dw__login button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .editButtons button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 #dw__login button:not(:disabled):not(.disabled).active:focus,
 #dokuwiki__content .editButtons button:not(:disabled):not(.disabled).active:focus,
 #dokuwiki__content #page__revisions button:not(:disabled):not(.disabled).active:focus,
-#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus,
 #dw__login .show > button.dropdown-toggle:focus,
 #dokuwiki__content .editButtons .show > button.dropdown-toggle:focus,
-#dokuwiki__content #page__revisions .show > button.dropdown-toggle:focus,
-#dokuwiki__content .secedit .show > button.dropdown-toggle:focus {
+#dokuwiki__content #page__revisions .show > button.dropdown-toggle:focus {
   box-shadow: 0 0 0 0 rgba(118, 135, 232, 0.5);
 }
 
-.btn-secondary, #tool__bar button {
+.btn-secondary, #tool__bar button, #dokuwiki__content .secedit button {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.btn-secondary:hover, #tool__bar button:hover {
+.btn-secondary:hover, #tool__bar button:hover, #dokuwiki__content .secedit button:hover {
   color: #212529;
   background-color: #dee1e7;
   border-color: #d6dae2;
 }
 
-.btn-secondary:focus, #tool__bar button:focus,
+.btn-secondary:focus, #tool__bar button:focus, #dokuwiki__content .secedit button:focus,
 .btn-secondary.focus,
-#tool__bar button.focus {
+#tool__bar button.focus,
+#dokuwiki__content .secedit button.focus {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(212, 214, 216, 0.5);
 }
 
-.btn-secondary.disabled, #tool__bar button.disabled,
+.btn-secondary.disabled, #tool__bar button.disabled, #dokuwiki__content .secedit button.disabled,
 .btn-secondary:disabled,
-#tool__bar button:disabled {
+#tool__bar button:disabled,
+#dokuwiki__content .secedit button:disabled {
   color: #212529;
   background-color: #f4f5f7;
   border-color: #f4f5f7;
 }
 
-.btn-secondary:not(:disabled):not(.disabled):active, #tool__bar button:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled):active, #tool__bar button:not(:disabled):not(.disabled):active, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 #tool__bar button:not(:disabled):not(.disabled).active,
+#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle,
-#tool__bar .show > button.dropdown-toggle {
+#tool__bar .show > button.dropdown-toggle,
+#dokuwiki__content .secedit .show > button.dropdown-toggle {
   color: #212529;
   background-color: #d6dae2;
   border-color: #cfd3dc;
 }
 
-.btn-secondary:not(:disabled):not(.disabled):active:focus, #tool__bar button:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus, #tool__bar button:not(:disabled):not(.disabled):active:focus, #dokuwiki__content .secedit button:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
 #tool__bar button:not(:disabled):not(.disabled).active:focus,
+#dokuwiki__content .secedit button:not(:disabled):not(.disabled).active:focus,
 .show > .btn-secondary.dropdown-toggle:focus,
-#tool__bar .show > button.dropdown-toggle:focus {
+#tool__bar .show > button.dropdown-toggle:focus,
+#dokuwiki__content .secedit .show > button.dropdown-toggle:focus {
   box-shadow: 0 0 0 0 rgba(212, 214, 216, 0.5);
 }
 
@@ -25266,6 +25266,14 @@ input, select {
 #dokuwiki__content .secedit button {
   margin-bottom: 1em;
   float: right;
+  color: #999;
+  background-color: white;
+  box-shadow: none;
+  font-size: 0.65rem;
+}
+#dokuwiki__content .secedit button:focus, #dokuwiki__content .secedit button:hover {
+  background-color: white;
+  box-shadow: none;
 }
 #dokuwiki__content .wikilink2 {
   color: #dc3545;
@@ -25358,6 +25366,12 @@ textarea {
   list-style-position: outside;
   list-style-image: none;
   list-style-type: disc;
+}
+
+.header-title a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .argon-doku-navbar-icon {
@@ -25510,6 +25524,23 @@ textarea {
   color: #212529;
 }
 
+.argon-doku-page-menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 1.75rem 0 0.5rem;
+}
+.argon-doku-page-menu li {
+  display: inline;
+  fill: #6c757d;
+}
+.argon-doku-page-menu li :hover {
+  fill: #525f7f;
+}
+.argon-doku-page-menu li:nth-of-type(1) {
+  margin-left: 0em;
+}
+
 .footer-card {
   background-color: #f4f5f7;
   text-align: center;
@@ -25518,19 +25549,121 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
-.footer-card .argon-doku-footer-fullmenu {
-  margin-left: auto;
-  margin-right: auto;
+
+:root {
+  font-size: 14px;
 }
-.footer-card .argon-doku-footer-fullmenu li {
-  display: inline;
+
+h1, .h1 {
+  font-size: 2.3rem;
+}
+
+h2,
+.h2,
+#dw__login legend label {
+  font-size: 2rem;
+}
+
+h3,
+.h3,
+legend,
+#dw__register legend,
+#dw__profiledelete legend {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.3rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.15rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  background-color: #f2f4f5;
+}
+
+.dropdown-item > .argon-doku-navbar-icon {
+  fill: #8898aa;
+}
+
+.leftsidebar h1, .leftsidebar h2 .leftsidebar h3, .leftsidebar h4, .leftsidebar h5, .leftsidebar h6 {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.leftsidebar .ct-toc-link {
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+.leftsidebar p {
+  margin: 0 0 0 1.5em;
+  padding: 0 0 0 1.5em;
+  line-height: 1.2;
+}
+
+.leftsidebar .wikilink1, .leftsidebar .wikilink2, .leftsidebar .wikilink3 {
+  list-style-type: none;
+  display: block;
+  font-size: 84%;
+  padding: 0.25rem;
+  color: #4c555a;
+  font-weight: 400;
+  margin-bottom: -1rem;
+}
+
+.page-info {
+  opacity: 0.8;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.doku_form .no #qsearch__in.edit {
+  height: auto;
+}
+
+.footer-card {
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.page-menu__link svg {
   fill: #6c757d;
 }
-.footer-card .argon-doku-footer-fullmenu li :hover {
-  fill: #525f7f;
+
+.floating-top-button {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 1000;
 }
-.footer-card .argon-doku-footer-fullmenu li:nth-of-type(1) {
-  margin-left: 0em;
+.floating-top-button .btn, .floating-top-button button, .floating-top-button #dokuwiki__content .secedit button, #dokuwiki__content .secedit .floating-top-button button, .floating-top-button #dokuwiki__content #page__revisions button, #dokuwiki__content #page__revisions .floating-top-button button, .floating-top-button #dokuwiki__content .editButtons button, #dokuwiki__content .editButtons .floating-top-button button, .floating-top-button #tool__bar button, #tool__bar .floating-top-button button, .floating-top-button .doku_form .no button, .doku_form .no .floating-top-button button, .floating-top-button .toggleAssistant, .floating-top-button .qq-upload-button, .floating-top-button #dw__login button, #dw__login .floating-top-button button {
+  background-color: white;
+  border-color: #c9cfd4;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+}
+.floating-top-button .btn i, .floating-top-button button i, .floating-top-button #dokuwiki__content .secedit button i, #dokuwiki__content .secedit .floating-top-button button i, .floating-top-button #dokuwiki__content #page__revisions button i, #dokuwiki__content #page__revisions .floating-top-button button i, .floating-top-button #dokuwiki__content .editButtons button i, #dokuwiki__content .editButtons .floating-top-button button i, .floating-top-button #tool__bar button i, #tool__bar .floating-top-button button i, .floating-top-button .doku_form .no button i, .doku_form .no .floating-top-button button i, .floating-top-button .toggleAssistant i, .floating-top-button .qq-upload-button i, .floating-top-button #dw__login button i, #dw__login .floating-top-button button i {
+  margin: 0;
+}
+.floating-top-button .btn .page-menu__link .tool-link svg, .floating-top-button button .page-menu__link .tool-link svg, .floating-top-button #dokuwiki__content .secedit button .page-menu__link .tool-link svg, #dokuwiki__content .secedit .floating-top-button button .page-menu__link .tool-link svg, .floating-top-button #dokuwiki__content #page__revisions button .page-menu__link .tool-link svg, #dokuwiki__content #page__revisions .floating-top-button button .page-menu__link .tool-link svg, .floating-top-button #dokuwiki__content .editButtons button .page-menu__link .tool-link svg, #dokuwiki__content .editButtons .floating-top-button button .page-menu__link .tool-link svg, .floating-top-button #tool__bar button .page-menu__link .tool-link svg, #tool__bar .floating-top-button button .page-menu__link .tool-link svg, .floating-top-button .toggleAssistant .page-menu__link .tool-link svg, .floating-top-button .qq-upload-button .page-menu__link .tool-link svg, .floating-top-button #dw__login button .page-menu__link .tool-link svg, #dw__login .floating-top-button button .page-menu__link .tool-link svg {
+  width: 20px;
+  height: 20px;
+  fill: greenyellow;
 }
 
 /*# sourceMappingURL=doku.css.map */

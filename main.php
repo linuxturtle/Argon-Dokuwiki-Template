@@ -23,7 +23,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 		<title>
 			<?php tpl_pagetitle()?> [
 			<?php echo strip_tags($conf['title']) ?>]</title>
@@ -53,37 +53,49 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
 	<body class="docs ">
 		<div id="dokuwiki__site">
-
-
 			<header
 				class="navbar navbar-horizontal navbar-expand navbar-dark flex-row align-items-md-center ct-navbar bg-primary py-2">
 
 
-				<div class="btn btn-neutral btn-icon">
-					<span class="btn-inner--icon">
-						<!-- <i class=""></i> -->
-					</span>
-					<span
-						class="nav-link-inner--text"><?php tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"')?></span>
-
+				<div class="header-title">
+                    <?php
+                    $showIcon = tpl_getConf('showIcon');
+                    if ($showIcon):
+                    ?>
+                    <img width="30px" src="<?php echo tpl_basedir(); ?>/images/doku-icon.png"/>
+                    <?php endif; ?>
+                    <?php tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"')?>
 				</div>
 
 
 				<div class="d-none d-sm-block ml-auto">
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
-
-						<?php
-						$menu_items = (new \dokuwiki\Menu\UserMenu())->getItems();
-						foreach($menu_items as $item) {
-						echo '<li>'
-							.'<a class="nav-link" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-							.'<i class="argon-doku-navbar-icon">'.inlineSVG($item->getSvg()).'</i>'
-							. '<span class="a11y">'.$item->getLabel().'</span>'
-							. '</a></li>';
-						}
-
-						?>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?php
+                                if (!empty($_SERVER['REMOTE_USER'])) {
+//                            $loggedinas = tpl_getLang('loggedinas');
+                                    ob_start();
+                                    tpl_userinfo();
+                                    $value = ob_get_contents();
+                                    ob_end_clean();
+                                    echo str_replace('Logged in as: ', '', $value);
+                                }
+                                ?>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <?php
+                                $menu_items = (new \dokuwiki\Menu\UserMenu())->getItems();
+                                foreach($menu_items as $item) {
+                                    echo '<a class="dropdown-item" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                        .'<i class="argon-doku-navbar-icon">'.inlineSVG($item->getSvg()).'</i>'
+                                        .$item->getLabel()
+                                        . '<span class="a11y">'.$item->getLabel().'</span>'
+                                        . '</a>';
+                                }
+                                ?>
+                            </div>
+                        </li>
 
 						<li class="nav-item">
 							<div class="search-form">
@@ -118,65 +130,33 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 					<!-- left sidebar -->
 					<div class="col-12 col-md-3 col-xl-2 ct-sidebar">
 						<nav class="collapse ct-links" id="ct-docs-nav">
-							<?php
-							if (!empty($_SERVER['REMOTE_USER'])) {
-								echo '<li class="nav-item nav-link"> ';
-								tpl_userinfo();
-								echo '</li>';
-							}
-							?>
-							<?php if ($showTools): ?>
-							<div id="dokuwiki__pagetools" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo $lang['page_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-									$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-									foreach($menu_items as $item) {
-									echo '<li>'
-										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-										. $item->getLabel()
-										. '</a></li>';
-									}
-									?>
-								</ul>
-							</div>
-							<?php endif;?>
-
-							<div class="ct-toc-item active">
-
-								<a class="ct-toc-link">
-									<?php echo $lang['site_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-									$menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
-									foreach($menu_items as $item) {
-									echo '<li>'
-										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-										. $item->getLabel()
-										. '</a></li>';
-									}
-
-									?>
-								</ul>
-							</div>
-
-
-
 							<?php if ($showSidebar): ?>
 							<div id="dokuwiki__aside" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo "Sidebar" ?>
-								</a>
 								<div class="leftsidebar">
 									<?php tpl_includeFile('sidebarheader.html')?>
 									<?php tpl_include_page($conf['sidebar'], 1, 1)?>
+                                    <a class="ct-toc-link">
+                                        <?php echo $lang['site_tools'] ?>
+                                    </a>
 									<?php tpl_includeFile('sidebarfooter.html')?>
 								</div>
 							</div>
 							<?php endif;?>
+
+                            <div class="ct-toc-item active">
+                                <ul class="nav ct-sidenav">
+                                    <?php
+                                    $menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
+                                    foreach($menu_items as $item) {
+                                        echo '<li>'
+                                            .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                            . $item->getLabel()
+                                            . '</a></li>';
+                                    }
+
+                                    ?>
+                                </ul>
+                            </div>
 						</nav>
 					</div>
 
@@ -206,69 +186,80 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 							</ol>
 						</nav>
 
+                        <!-- Page Menu -->
+                        <div class="argon-doku-page-menu">
+                            <?php
+                            $menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+                            foreach($menu_items as $item) {
+                                echo '<li>'
+                                    .'<a class="page-menu__link" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                    .'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+                                    . '<span class="a11y">'.$item->getLabel().'</span>'
+                                    . '</a></li>';
+                            }
+                            ?>
+                        </div>
+
+                        <!-- Floating Top Button -->
+                        <div class="floating-top-button">
+                            <?php
+                            $menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+                            foreach($menu_items as $item) {
+                                if ($item->getType() != "top") continue;
+                                echo '<a class="btn" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                    .'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+                                    . '<span class="a11y">'.$item->getLabel().'</span>'
+                                    . '</a>';
+                            }
+                            ?>
+                        </div>
+
 
 						<!-- Wiki Contents -->
 						<div id="dokuwiki__content">
 							<div class="pad">
-
 								<div class="page">
-
 									<?php echo $buffer ?>
 								</div>
 							</div>							
 						</div>
 
 						<hr />
-						
-						<!-- Footer -->
-						<div class="card footer-card">
-							<div class="card-body">
-								<div class="container">
-									<div class="row">
-										<div class="col">
-											<div id="dokuwiki__footer">
-												<div class="pad">
-													<div class="doc">
-														<?php tpl_pageinfo() /* 'Last modified' etc */ ?></div>
-													<?php tpl_license('0') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
-												</div>
-											</div>
-										</div>
-									</div>
-									<br/>
-									<div class="row">
 
-										<div class="footer-search">
-											<?php tpl_searchform()?>
-										</div>
+                        <!-- Footer -->
+                        <footer>
+                            <div class="row">
+                                <p class="page-info"><?php tpl_pageinfo() /* 'Last modified' etc */ ?></p>
+                            </div>
 
-									</div>
-									<br/>
-									<div class="row">
-									<div class="argon-doku-footer-fullmenu">
-										<?php
-										$menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
-										foreach($menu_items as $item) {
-										echo '<li>'
-											.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
-											. '<span class="a11y">'.$item->getLabel().'</span>'
-											. '</a></li>';
-										}
-										?>
-									</div>
-									<?php tpl_includeFile('footer.html') ?>
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-						<?php tpl_indexerWebBug(); ?>
+                            <?php
+                                ob_start();
+                                tpl_license('0');
+                                $buffer = ob_get_clean();
+                                if ($buffer):
+                                ?>
+                            <div class="card footer-card">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div id="dokuwiki__footer">
+                                                    <div class="pad">
+                                                        <div class="doc">
+                                                        </div>
+                                                        <?php tpl_license('0') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endif;?>
+                            <?php tpl_includeFile('footer.html') ?>
+                            <?php tpl_indexerWebBug(); ?>
+                        </footer>
 					</main>
-
-
-
 
 					<!-- Right Sidebar -->
 					<div class="d-none d-xl-block col-xl-2 ct-toc">

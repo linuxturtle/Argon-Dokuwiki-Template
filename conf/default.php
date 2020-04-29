@@ -7,3 +7,5 @@
 $conf['discussionPage']   = 'discussion:@ID@';
 $conf['userPage']         = 'user:@USER@:';
 $conf['hideTools']        = 0;
+$conf['showIcon']         = 1;
+

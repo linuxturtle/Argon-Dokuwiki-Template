@@ -76,11 +76,19 @@ input, select {
 
     // Edit Button
     .secedit button {
-        @extend .btn; 
-        @extend .btn-primary;
+        @extend .btn;
+        @extend .btn-secondary;
         @extend .btn-sm;
         margin-bottom: 1em;
         float: right;
+        color: #999;
+        background-color: white;
+        box-shadow: none;
+        font-size: 0.65rem;
+        &:focus,&:hover{
+            background-color: white;
+            box-shadow: none;
+        }
     }
 
     // Non-existant links
@@ -237,6 +245,12 @@ textarea {
 }
 
 // ------ Navbar ------
+
+.header-title a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 
 // Navbar Icons
 .argon-doku-navbar-icon {
@@ -471,6 +485,26 @@ textarea {
 
 }
 
+
+.argon-doku-page-menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 1.75rem 0 0.5rem;
+
+    li {
+        display: inline;
+        fill: #6c757d;
+        :hover {
+            fill:#525f7f;
+        }
+    }
+
+    li:nth-of-type(1) {
+        margin-left: 0em;
+    }
+}
+
 // ------ Footer ------
 
 .footer-card {
@@ -482,22 +516,7 @@ textarea {
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .argon-doku-footer-fullmenu {
-        margin-left: auto;
-        margin-right: auto;
 
-        li {
-            display: inline;
-            fill: #6c757d;
-            :hover {
-                fill:#525f7f;
-            }
-        }
-
-        li:nth-of-type(1) {
-            margin-left: 0em;
-        }
-    }
 }
 
+@import 'modifications';
