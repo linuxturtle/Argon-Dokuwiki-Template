@@ -8,7 +8,7 @@
     "sass": "^1.26.5"
   },
   "scripts": {
-    "styles": ""
+    "styles": "sass --watch assets/css/doku.scss assets/css/doku.css"
   },
   "repository": {
     "type": "git",
