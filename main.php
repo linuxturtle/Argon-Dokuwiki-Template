@@ -18,12 +18,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-		<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+		<link rel="icon" type="image/png" href="<?php echo tpl_basedir(); ?>images/favicon<?php echo tpl_getConf('favicon')?>.ico">
 		<title>
 			<?php tpl_pagetitle()?> [
 			<?php echo strip_tags($conf['title']) ?>]</title>
@@ -62,7 +61,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                     $showIcon = tpl_getConf('showIcon');
                     if ($showIcon):
                     ?>
-                    <img width="30px" src="<?php echo tpl_basedir(); ?>/images/doku-icon.png"/>
+                    <img width="30px" src="<?php echo tpl_basedir(); ?>/images/doku-icon<?php echo tpl_getConf('icon')?>.png"/>
                     <?php endif; ?>
                     <?php tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"')?>
 				</div>
