@@ -1,5 +1,5 @@
 {
-  "name": "Argon-Dokuwiki-Template-Alternative",
+  "name": "argon-dokuwiki-template-alternative",
   "version": "1.0.0",
   "description": "Argon - a clean, responsive, modern template for Dokuwiki. https://www.dokuwiki.org/template:argon",
   "main": "script.js",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jessfernando/Argon-Dokuwiki-Template/issues"
   },
-  "homepage": "https://github.com/jessfernando/Argon-Dokuwiki-Template#readme"
+  "homepage": "https://github.com/jessfernando/Argon-Dokuwiki-Template#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@jessfernando"
+  }
 }
