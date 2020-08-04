@@ -1,5 +1,5 @@
 {
-  "name": "argon-dokuwiki-template-alternative",
+  "name": "argon-dokuwiki-template-dixieturtle",
   "version": "1.0.0",
   "description": "Argon - a clean, responsive, modern template for Dokuwiki. https://www.dokuwiki.org/template:argon",
   "main": "script.js",
@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jessfernando/Argon-Dokuwiki-Template.git"
+    "url": "git+https://github.com/linuxturtle/Argon-Dokuwiki-Template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jessfernando/Argon-Dokuwiki-Template/issues"
+    "url": "https://github.com/linuxturtle/Argon-Dokuwiki-Template/issues"
   },
-  "homepage": "https://github.com/jessfernando/Argon-Dokuwiki-Template#readme",
+  "homepage": "https://github.com/linuxturtle/Argon-Dokuwiki-Template#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@jessfernando"
+    "registry": "https://npm.pkg.github.com/@linuxturtle"
   }
 }

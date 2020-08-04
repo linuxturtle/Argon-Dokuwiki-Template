@@ -1,7 +1,7 @@
-base     argon-alternative
-author   jhak
-email    jesshakola@gmail.com
+base     argon-dixieturtle
+author   linuxturtle
+email    brett@linuxturtle.net
 date     2020-04-28
-name     Argon Template Alternative
+name     Argon Template Dixieturtle
 desc     Argon template with enhanced toolbars and menus
-url      https://www.dokuwiki.org/template:argon-alternative
+#url      https://www.dokuwiki.org/template:argon-alternative
