@@ -54,19 +54,21 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 		<div id="dokuwiki__site">
 			<header
 				class="navbar navbar-horizontal navbar-expand navbar-dark flex-row align-items-md-center ct-navbar bg-primary py-2">
-
-
 				<div class="header-title">
-                    <?php
+					<?php
                     $showIcon = tpl_getConf('showIcon');
                     if ($showIcon):
                     ?>
-                    <img width="30px" src="<?php echo tpl_basedir(); ?>/images/doku-icon<?php echo tpl_getConf('icon')?>.png"/>
-                    <?php endif; ?>
-                    <?php tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"')?>
+					<img width="30px" src="<?php echo tpl_basedir(); ?>/images/doku-icon<?php echo tpl_getConf('icon')?>.png"/>
+                    <?php
+					endif;
+                    tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"');
+					?>
+                    <?php
+				//	$headerID_location="header_id";
+				//	echo strip_tags(tpl_include_page($headerID_location));
+					?>
 				</div>
-
-
 				<div class="d-none d-sm-block ml-auto">
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
                         <li class="nav-item dropdown">
@@ -273,3 +275,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 	</body>
 
 </html>
+
+<!--
+ vim: ts=4 sw=4 ss=4
+-->
